@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #1992D4;
+    --bg-blue: #d4dfee;
+    --lite-blue-white: #d4dfee9a;
+    --white: white;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.container {
+    background-color: skyblue;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.header {
+    background-color: var(--white);
+    grid-column-start: 2;
+    padding: 20px 20px 10px 20px;
+    display: grid;
+    grid-template-rows: 50px 80px;
+    gap: 15px;
+    box-shadow: 0 3px 5px rgb(182, 182, 182);
+    z-index: 1;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    flex-grow: 1;
+}
+
+.noti-acc-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-bottom {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.sidebar {
+    grid-row: 1 / 3;
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-rows: 60px 400px 150px;
+    box-shadow: 0 5px 8px rgb(212, 212, 212);
+    z-index: 2;
+}
+
+.branding-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.branding-section svg {
+    width: 50px ;
+    height: 60px;
+}
+
+.main-content {
+    background-color: var(--bg-blue);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+    gap: 15px;
+}
+
+svg {
+    width: 1.4rem;
+    height: auto;
+    fill: white;
+}
+
+.header svg {
+    fill: black;
+}
+
+nav a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    gap: 15px;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    background-color: var(--lite-blue-white);
+}
+
+.sidebar nav:first-of-type {
+    padding-top: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+input[type="search"] {
+    width: 80%;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--bg-blue);
+}
+
+img {
+    border-radius: 100px;
+}
+
+.search-bar svg {
+    transform: translateY(7px);
+}
+
+button {
+    border-radius: 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 7px 15px;
+    border: none;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #1178af;
+}
+
+.btns-container {
+    display: flex;
+    gap: 20px;
+}
+
+.account-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    border-left: 6px solid green;
+}
+
+.your-projects {
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20px auto;
+    gap: 10px;
+}
+
+.your-projects h3 {
+    grid-column: 1 / 3;
+}
+
+.announcements-section {
+    display: grid;
+    grid-template-rows: 20px auto auto;
+    gap: 10px;
+}
+
+.announcements-card {
+    background-color: var(--white);
+    font-size: 15px;
+    color: rgb(48, 48, 48);
+    border-radius: 10px;
+    padding: 12px 15px;
+}
+
+.announcements-card li:not(:last-child) {
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(117, 117, 117);
+}
+
+.announcements-card li:last-child {
+    padding-top: 13px;
+    padding-bottom: 0;
+}
+
+.announcements-card h5 {
+    color: black;
+    margin-bottom: 4px;
+}
+
+.trending-section {
+    display: grid;
+    grid-template-rows: 20px auto;
+    gap: 10px;
+}
+
+.trending-card {
+    background-color: var(--white);
+    font-size: 14px;
+    padding: 10px 13px;
+    border-radius: 10px;display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.trend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.trend p:first-child {
+    margin-bottom: 5px;
+}
+
+.trend p:not(:first-child) {
+    color: rgb(116, 116, 116);
+}
+
